@@ -1,13 +1,5 @@
 import Image from "next/image";
-
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-let basePath = "";
-
-if (isGithubActions) {
-  // 去掉 `<owner>/`
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-  basePath = `/${repo}`;
-}
+import { basePath } from "./config";
 
 export default function Home() {
   return (
