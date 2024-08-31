@@ -18,7 +18,7 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force
       - name: Install npm
-        run: npm install -g npm@10
+        run: npm install -g npm@7
       - name: 安装依赖 ⚙️
         run: npm install
       - name: 打包 🏗️
