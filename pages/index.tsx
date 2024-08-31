@@ -1,6 +1,6 @@
-'use client';
 import { useEffect, useRef, useState } from "react";
-import { Button, Card } from 'antd';
+// import { Button } from 'antd';
+// import { Button, Card } from 'antd';
 
 export default function Home() {
   const [num, setNum] = useState(0);
@@ -63,13 +63,15 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Card title="随机抽人">
+      {/* <Card title="随机抽人"> */}
         <div className="text-4xl text-center">{`${students[num].id} - ${students[num].name}`}</div>
         <div className="flex justify-between items-center space-x-4 mt-5">
-        <Button type="primary" onClick={onStart}>开始</Button>
-        <Button type="primary" onClick={onPause}>暂停</Button>
+          <button onClick={onStart}>开始</button>
+        <button onClick={onPause}>暂停</button>
+        {/* <Button type="primary" onClick={onStart}>开始</Button>
+        <Button type="primary" onClick={onPause}>暂停</Button> */}
         </div>
-      </Card>
+      {/* </Card> */}
     </main>
   );
 }
