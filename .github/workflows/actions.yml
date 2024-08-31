@@ -24,6 +24,6 @@ jobs:
       - name: 部署 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: master
+          branch: release
           folder: out
           clean: true
