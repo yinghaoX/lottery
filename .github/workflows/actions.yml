@@ -15,14 +15,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Clear npm cache
-        run: npm cache clean --force
-      - name: Install npm
-        run: npm install -g npm@7
       - name: 安装依赖 ⚙️
         run: npm install
-        env:
-          NPM_CONFIG_REGISTRY: https://registry.npm.taobao.org
       - name: 打包 🏗️
         run: |
           npm run build
